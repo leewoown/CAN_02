@@ -1,9 +1,9 @@
 ﻿[TSMaster]
-TSMasterVersion=2024.12.18.1238
+TSMasterVersion=2025.3.25.1360
 TSMasterArchitect=x86
 
 [Project]
 GUID=7D692F20-FDE5-4DAC-AEDE-E867DCF94CD8
-LoadCount=35
+LoadCount=37
 TSAppVersion=100
 

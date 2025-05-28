@@ -1,0 +1,153 @@
+VERSION ""
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+BU_: DefaultSender DefaultReceiver
+
+BO_ 268 BMA1_0_CellT_1G: 8 DefaultSender
+ SG_ B1A_Cell001_temps : 0|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell002_temps : 16|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell003_temps : 32|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell004_temps : 48|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+
+BO_ 269 BMA1_0_CellT_2G: 8 DefaultSender
+ SG_ B1A_Cell005_temps : 0|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell006_temps : 16|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell007_temps : 32|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell008_temps : 48|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+
+BO_ 270 BMA1_0_CellT_3G: 8 DefaultSender
+ SG_ B1A_Cell009_temps : 0|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell010_temps : 16|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell011_temps : 32|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell012_temps : 48|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+
+BO_ 271 BMA1_0_CellT_4G: 8 DefaultSender
+ SG_ B1A_Cell013_temps : 0|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell014_temps : 16|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell015_temps : 32|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell016_temps : 48|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+
+BO_ 256 BMA1_0_CellT_5G: 8 DefaultSender
+ SG_ B1A_Cell017_temps : 0|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell018_temps : 16|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell019_temps : 32|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell020_temps : 48|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+
+BO_ 257 BMA1_0_CellT_6G: 8 DefaultSender
+ SG_ B1A_Cell021_temps : 0|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell022_temps : 16|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell023_temps : 32|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ B1A_Cell024_temps : 48|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+
+BO_ 260 BMA1_0_CellTempSate: 8 DefaultSender
+ SG_ BMA_0_Cell_MaxT : 0|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ BMA_0_Cell_MinT : 8|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ BMA_0_Cell_AVGT : 16|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ BMA_0_Cell_DeviT : 48|16@1+ (0.1,0.0) [0.0|25.0] "deg" DefaultReceiver
+
+BO_ 259 BMA1_0_CellVSate: 8 DefaultSender
+ SG_ BMA_0_Cell_MaxV : 0|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ BMA_0_Cell_MinV : 16|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ BMA_0_Cell_AVGV : 32|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ BMA_0_Cell_DeviV : 48|16@1+ (0.001,0.0) [0.0|5000.0] "mV" DefaultReceiver
+
+BO_ 262 BMA1_0_CellV_1G: 8 DefaultSender
+ SG_ B1A_Cell001_Volt : 0|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell002_Volt : 16|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell003_Volt : 32|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell004_Volt : 48|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+
+BO_ 263 BMA1_0_CellV_2G: 8 DefaultSender
+ SG_ B1A_Cell005_Volt : 0|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell006_Volt : 16|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell007_Volt : 32|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell008_Volt : 48|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+
+BO_ 264 BMA1_0_CellV_3G: 8 DefaultSender
+ SG_ B1A_Cell009_Volt : 0|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell010_Volt : 16|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell011_Volt : 32|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell012_Volt : 48|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+
+BO_ 265 BMA1_0_CellV_4G: 8 DefaultSender
+ SG_ B1A_Cell013_Volt : 0|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell014_Volt : 16|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell015_Volt : 32|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell016_Volt : 48|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+
+BO_ 266 BMA1_0_CellV_5G: 8 DefaultSender
+ SG_ B1A_Cell017_Volt : 0|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell018_Volt : 16|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell019_Volt : 32|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell020_Volt : 48|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+
+BO_ 267 BMA1_0_CellV_6G: 8 DefaultSender
+ SG_ B1A_Cell021_Volt : 0|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell022_Volt : 16|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell023_Volt : 32|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+ SG_ B1A_Cell024_Volt : 48|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+
+BO_ 258 BMA1_0_Infro: 8 DefaultSender
+ SG_ BMA_0_Volt_Qty : 0|8@1+ (1.0,0.0) [0.0|24.0] "EA" DefaultReceiver
+ SG_ BMA_0_SW_Ver : 8|8@1+ (1.0,0.0) [1.0|256.0] "REV" DefaultReceiver
+ SG_ BMA_0_0or_Voltage : 16|8@1+ (0.1,0.0) [30.0|100.0] "V" DefaultReceiver
+ SG_ BMA_0_Capacity : 32|16@1+ (1.0,0.0) [0.0|200.0] "Ah" DefaultReceiver
+ SG_ BMA_0_SYS_BMS_MinVoltage : 48|16@1+ (0.1,0.0) [30.0|60.0] "V" DefaultReceiver
+
+BO_ 261 BMA1_0_VoltProtect: 8 DefaultSender
+ SG_ BMA_0_TotalVolte : 0|16@1+ (0.1,0.0) [30.0|100.0] "V" DefaultReceiver
+ SG_ BMA_0_CellMaxVolt0um : 8|8@1+ (1.0,0.0) [0.0|24.0] "C" DefaultReceiver
+ SG_ BMA_0_CellMinVolt0um : 16|8@1+ (1.0,0.0) [0.0|24.0] "C" DefaultReceiver
+ SG_ BMA_0_CellMaxTemps0um : 24|8@1+ (1.0,0.0) [0.0|24.0] "C" DefaultReceiver
+ SG_ BMA_0_CellMaxTemps0um : 32|8@1+ (1.0,0.0) [0.0|24.0] "C" DefaultReceiver
+ SG_ BMA_0__I0ITOK : 33|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ BMA_0__Fault : 34|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ BMA_0__Balan_On_OFF : 35|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ BMA_0_Waterleak_Err : 36|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ BMA_0_CellVolt_Err : 37|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ BMA_0_CellTemps_Err : 38|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ BMA_0_BATIC_Err : 39|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ BMA_0_CTCOM_Err : 40|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+
+BO_ 1296 BMB_TXSTATE1: 8 DefaultSender
+ SG_ PackStatus : 0|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ PackComEn : 8|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ Pack1eset : 9|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ 1ack_G_Cell_AVGT : 32|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ 1ack_G_Cell_MinV : 48|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver
+
+BO_ 1298 HMI_STATE1: 8 DefaultSender
+ SG_ HMIComEn : 0|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ Volt1eq : 1|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ Temps1eq : 2|1@1+ (1.0,0.0) [0.0|1.0] "F" DefaultReceiver
+ SG_ HMI_G_Cell_AVGT : 32|16@1- (0.1,0.0) [-40.0|100.0] "deg" DefaultReceiver
+ SG_ HMI_G_Cell_MinV : 48|16@1+ (0.001,0.0) [2.8|4.5] "V" DefaultReceiver

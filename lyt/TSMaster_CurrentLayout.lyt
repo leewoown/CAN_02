@@ -2,7 +2,7 @@
 DebugMode=0
 DisableResize=0
 LogVerbose=6
-Bounds=0,0,1936,1164
+Bounds=0,0,1932,1056
 Maximized=1
 AutoGenConstDef=0
 AutoGenDBConstDef=0
@@ -27,6 +27,7 @@ DisplayFormByPage=1
 ShowTabGroups=1
 Magnetic=1
 AppName=TSMaster
+AutoHandleCANUB=1
 
 [OnlineReplay]
 CANCount=0
@@ -47,9 +48,9 @@ Speed=1
 Step=0.1
 
 [MeasurementController]
-MCount=16
+MCount=18
 M0=0,1,217,-1,0,TfrmSystemMsgs,System Messages
-M1=-1,1,160,-1,1,TfrmBasePluginSingle.TfrmLdfEditor,Deleted: BasePluginSingle.TfrmLdfEditor
+M1=0,1,160,-1,1,TfrmBasePluginSingle.TfrmLdfEditor,LDF Editor
 M2=0,1,432,-1,2,TfrmToolboxBuilder,TOSUN Toolbox design environment
 M3=0,1,433,-1,3,TfrmTSForm.Kinetics_Analysis,Kinetics_Analysis
 M4=0,1,62,-1,4,TfrmCANDatabase,CAN Database
@@ -62,17 +63,19 @@ M10=0,1,407,-1,10,TfrmGPBuilder,Graphic Program Builder
 M11=0,1,366,-1,11,TfrmGPLibrary,Graphic Program Library
 M12=0,1,213,-1,12,TfrmLogging,Bus Logging
 M13=0,1,215,-1,13,TfrmPlayback,Bus Playback
-M14=0,1,177,-1,14,TfrmGraphics,Graphics
+M14=0,1,177,-1,14,TfrmGraphics,UNITBMS상태정보
 M15=0,1,245,-1,15,TfrmMeasurementSetup,Measurement Setup
+M16=1,1,177,-1,16,TfrmGraphics,셀 전압 측정값
+M17=0,1,214,-1,17,TfrmCANStatistics,CAN Statistics
 
 [SystemMsgOptions]
 MaxLines=100000
-UICommon=0,-1,0,0,U3lzdGVtIE1lc3NhZ2Vz,100,116,8317025286950054396,0
+UICommon=0,-1,0,0,U3lzdGVtIE1lc3NhZ2Vz,100,130,8317025286950054396,0
 UIFilter=
 
 [ChannelMappings]
 CANChnCount=1
-CAN0=0,0,4,0,81,-1,0,500,2000,TSMaster,default
+CAN0=0,0,3,0,0,14,0,500,2000,TSMaster,TLog1002
 LINChnCount=0
 FlexRayChnCount=0
 EthernetChnCount=0
@@ -107,6 +110,7 @@ FlexRay RBS Controller=100
 CAN / CAN FD Trace 1=100
 Bus Replay=100
 Graphics=100
+Ethernet RBS=100
 
 [app_conn_callback_after_connect]
 CAN RBS=100
@@ -120,6 +124,7 @@ MDI Manager=100
 TSMaster Main Application=100
 Graphics=100
 Measurement Setup=100
+Ethernet RBS=100
 
 [app_conn_callback_before_disconnect]
 J1939 TP=100
@@ -142,6 +147,7 @@ CAN / CAN FD Trace 1=100
 CAN Transmit=100
 Graphics=100
 Measurement Setup=100
+Ethernet RBS=100
 
 [app_hw_selector_conf]
 FEnableTSync=0
@@ -168,11 +174,11 @@ UICommon=0,0,0,0,SGFyZHdhcmUgQ29uZmlndXJhdGlvbg__,100,530,552255606585347257,0
 UIFilter=
 
 [TfrmBasePluginSingle.TfrmLdfEditor]
-UICommon=0,-1,0,0,TERGIEVkaXRvcg__,100,0,7594757832575848893,0
+UICommon=0,-1,0,0,TERGIEVkaXRvcg__,100,-1,7594757832575848893,0
 UIFilter=
 
 [TfrmToolboxBuilder]
-UICommon=0,-1,-1,0,VE9TVU4gVG9vbGJveCBkZXNpZ24gZW52aXJvbm1lbnQ_,100,310,9165951153002707410,0
+UICommon=0,-1,-1,0,VE9TVU4gVG9vbGJveCBkZXNpZ24gZW52aXJvbm1lbnQ_,100,480,9165951153002707410,0
 UIFilter=
 ExportsCount=0
 mCount=1
@@ -216,17 +222,17 @@ CAN_UnitBMS_SybR10Alias=
 DBFilesCount=1
 DBOriCount=1
 ChnCANCount=1
-UICommon=0,-1,0,0,Q0FOIERhdGFiYXNl,100,386,288795066423567139,0
+UICommon=0,-1,0,0,Q0FOIERhdGFiYXNl,100,414,288795066423567139,0
 UIFilter=
 PropertyHeight=298
 PropertyVisible=1
 HWChnCount=2
 DBFiles0=.\DB\CAN\UnitBMS_SybR10.pdbc
-DBOri0=..\UnitBMS_SybR10.dbc
+DBOri0=E:\102 PCAN\UnitBMS_SybR10.dbc
 ChnCAN0=0
 
 [TfrmBasePluginSingle.TfrmLicenseClient]
-UICommon=0,-1,0,0,TGljZW5zZSBDbGllbnQ_,100,-1,5441192780612906175,0
+UICommon=0,-1,0,0,TGljZW5zZSBDbGllbnQ_,100,-1,2335408577868705209,0
 UIFilter=
 
 [MPLibrary]
@@ -238,11 +244,11 @@ UICommon=0,0,0,0,U2VsZWN0IFN5c3RlbSBWYXJpYWJsZXM_,100,141,1043991342166762734,0
 UIFilter=
 
 [TfrmGPBuilder]
-UICommon=0,-1,0,0,R3JhcGhpYyBQcm9ncmFtIEJ1aWxkZXI_,100,84,1861957599797565015,0
+UICommon=0,-1,0,0,R3JhcGhpYyBQcm9ncmFtIEJ1aWxkZXI_,100,156,1861957599797565015,0
 UIFilter=
 
 [TfrmGPLibrary]
-UICommon=0,-1,-1,0,R3JhcGhpYyBQcm9ncmFtIExpYnJhcnk_,100,310,7512567757316795136,0
+UICommon=0,-1,-1,0,R3JhcGhpYyBQcm9ncmFtIExpYnJhcnk_,100,327,7512567757316795136,0
 UIFilter=
 MName=Graphic Program Library
 ToolsWidth=500
@@ -275,9 +281,9 @@ c0=628711561374161465212387546
 LibCount=0
 
 [CANLogger0]
-UICommon=0,-1,0,0,QnVzIExvZ2dpbmc_,100,198,7809242459956531207,0
+UICommon=0,-1,0,0,QnVzIExvZ2dpbmc_,100,217,7809242459956531207,0
 UIFilter=
-LogName=TMSS022025_01_10_21_52_21.blf
+LogName=02 Unit_BMS2025_04_30_04_54_55.blf
 AddTime=1
 FollowConf=1
 DefaultDir=0
@@ -291,7 +297,7 @@ FDataFileNameRule=[Configuration Name][System Time]
 IsLoggingEnabled=1
 
 [Playback]
-UICommon=0,-1,0,0,QnVzIFBsYXliYWNr,100,121,8742050532848236019,0
+UICommon=0,-1,0,0,QnVzIFBsYXliYWNr,100,117,8742050532848236019,0
 UIFilter=
 PostHeight=156
 FilesCount=0
@@ -313,9 +319,16 @@ UIFilter=
 HWChnCount=2
 
 [MeasSetup]
-UICommon=0,-1,0,0,TWVhc3VyZW1lbnQgU2V0dXA_,100,54,1361496164083595072,0
+UICommon=0,-1,0,0,TWVhc3VyZW1lbnQgU2V0dXA_,100,90,1361496164083595072,0
 UIFilter=
 Zoom=1
+
+[CANStat]
+UICommon=0,-1,0,0,Q0FOIFN0YXRpc3RpY3M_,100,54,9180880032284781546,0
+UIFilter=
+
+[OfflineReplay]
+ChnMapping=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64
 
 [MDIInstances]
 TfrmBasePluginSingle.TfrmLicenseClient=1
@@ -375,58 +388,61 @@ TfrmTCPIPStack=0
 TfrmAutomationModule=0
 TfrmGPLibrary=1
 TfrmGPBuilder=1
+TfrmMpLibBuilder=0
+TfrmAutoSARE2EViewer=0
+TfrmEthernetRBS=0
 
 [Pg0]
 Count=4
 HiddenCount=16
-h0=TfrmToolboxBuilder,0,139,139,1681,1345,139,139,1681,1345,1
-h1=TfrmTSForm,0,72,104,1532,822,231,230,1359,899,1
-h2=TfrmCANDatabase,0,695,56,1577,1045,0,0,1577,1045,1
-f0=TfrmNumeric,0,1916,0,1496,1460,0,0,1627,709,1
-h3=TfrmNumeric,0,0,0,1627,709,0,0,1627,709,1
-h4=TfrmBasePluginSingle.TfrmLicenseClient,0,1031,82,1893,1409,-3275,794,1893,1409,1
-f1=TfrmCANFDTransmit,0,1180,42,1077,631,0,0,1887,1003,1
-f2=TfrmCANFDTrace,0,555,0,1124,1078,0,0,1968,707,1
-h5=TfrmNumeric,1,1364,77,1627,640,0,0,1627,640,1
-f3=TfrmGraphics,0,0,0,1916,1146,0,0,1935,1078,1
-h6=TfrmGPBuilder,0,0,0,1433,1072,0,0,1433,1072,1
-h7=TfrmGPLibrary,0,47,47,2229,1330,47,47,2229,1330,1
-h8=TfrmCANFDTrace,0,555,0,1124,1078,0,0,1968,707,1
-h9=TfrmLogging,0,0,0,1412,830,0,0,1412,830,1
-h10=TfrmPlayback,0,0,0,1884,1264,0,0,1884,1264,1
-h11=TfrmGraphics,0,-2175,223,4507,1460,0,0,1935,1078,1
-h12=TfrmMeasurementSetup,0,208,187,1115,629,208,187,1115,629,1
-h13=TfrmCANFDTransmit,0,1180,42,1077,631,0,0,1887,1003,1
-h14=TfrmGraphics,1,183,40,1944,988,0,0,1088,606,1
-h15=TfrmCANStatistics,0,0,59,296,386,0,0,284,401,1
+h0=TfrmToolboxBuilder,0,104,104,1261,1009,104,104,1261,1009,1
+h1=TfrmTSForm,0,72,104,1532,822,173,172,1019,674,1
+h2=TfrmCANDatabase,0,521,42,1183,784,0,0,1183,784,1
+f0=TfrmNumeric,0,1437,0,1122,1095,0,0,1220,532,1
+h3=TfrmNumeric,0,0,0,1220,532,0,0,1220,532,1
+h4=TfrmBasePluginSingle.TfrmLicenseClient,0,773,62,1420,1057,-2456,596,1420,1057,1
+f1=TfrmCANFDTrace,0,416,0,843,808,0,0,1476,530,1
+f2=TfrmCANDatabase,0,521,42,1183,784,0,0,1183,784,1
+h5=TfrmNumeric,1,1023,58,1220,480,0,0,1220,480,1
+f3=TfrmGraphics,0,0,0,1437,860,0,0,1451,808,1
+h6=TfrmGPBuilder,0,0,0,1075,804,0,0,1075,804,1
+h7=TfrmGPLibrary,0,35,35,1672,998,35,35,1672,998,1
+h8=TfrmCANFDTrace,0,416,0,843,808,0,0,1476,530,1
+h9=TfrmLogging,0,0,0,1059,622,0,0,1059,622,1
+h10=TfrmPlayback,0,0,0,1413,948,0,0,1413,948,1
+h11=TfrmGraphics,0,0,0,1437,860,0,0,1451,808,1
+h12=TfrmMeasurementSetup,0,156,140,836,472,156,140,836,472,1
+h13=TfrmCANFDTransmit,0,885,32,808,473,0,0,1415,752,1
+h14=TfrmGraphics,1,137,30,1458,741,0,0,816,454,1
+h15=TfrmCANStatistics,0,0,44,222,290,0,0,213,301,1
 
 [RTL_Form_Position_MDI]
 TfrmSystemMsgs=0,0,1294,328
 TfrmBasePluginSingle.TfrmLdfEditor=0,0,1090,659
-TfrmToolboxBuilder=312,312,1258,1069
+TfrmToolboxBuilder=104,104,1050,861
 Kinetics_Analysis0_TfrmTSForm.Kinetics_Analysis=72,104,1604,926
-CANFDTraceOptions=555,0,1679,1078
-TfrmNumeric=1916,0,3412,1460
-TfrmCANDatabase=0,0,887,588
-CANFDTransmit=1180,42,2257,673
-TfrmBasePluginSingle.TfrmLicenseClient=338,338,1403,1131
+CANFDTraceOptions=416,0,1259,808
+TfrmNumeric=1437,0,2559,1095
+TfrmCANDatabase=521,42,1704,826
+CANFDTransmit=0,0,1061,564
+TfrmBasePluginSingle.TfrmLicenseClient=104,104,1169,897
 TfrmNumeric1=0,0,915,399
 TfrmGPBuilder=0,0,806,603
-TfrmGPLibrary=364,364,1618,1112
+TfrmGPLibrary=156,156,1410,904
 TfrmLogging=0,0,794,467
 TfrmPlayback=0,0,1060,711
-Graphics=0,0,1916,1146
-TfrmMeasurementSetup=208,208,1044,732
-Graphics1=183,40,2127,1028
-TfrmCANStatistics=0,59,296,445
+Graphics=0,0,1437,860
+TfrmMeasurementSetup=260,260,1096,784
+Graphics1=0,0,1088,606
+TfrmCANStatistics=0,0,284,401
 
 [RTL_Form_Position]
-TfrmTSMaster_0=2552,349,5133,1750
+TfrmTSMaster_0=0,0,1936,1048
 TfrmChannelMapping=558,417,1361,869
 TfrmHardware=558,342,1362,943
 TfrmProjectSettings=878,283,1677,901
 TfrmAutomotiveFileConverter=521,337,1398,949
-TfrmCANDatabase1=836,463,1723,1051
+TfrmCANDatabase1=452,255,1468,886
 TfrmMPLibrary=798,509,1761,993
 TfrmSystemVarMgmt=879,377,1681,1124
 TfrmTCPIPStack=240,209,1680,1052
@@ -439,9 +455,9 @@ Tabbed=0
 PageCnt=1
 ActiveIdx=0
 Pg0=Workspace
-ScreenWidth=2560
-ScreenHeight=1440
-MainBounds=-8,-8,2568,1400
+ScreenWidth=1920
+ScreenHeight=1080
+MainBounds=-8,-8,1928,1040
 PixelsPerInch=96
 AppLeftP=-8
 AppTopP=-8
